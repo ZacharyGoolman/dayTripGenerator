@@ -1,6 +1,6 @@
 
 
-# make 4 lists. lists should be the only thing outside of the function. 
+# lists created for users random selection
 
 Destinations = ["New York" , "Washington" , "North Carolina" , "Ohio"]
 
@@ -10,57 +10,60 @@ Restaurants = ["Aces perfect Pizza" , "Barmini" , "Mayflower Seafood" , "Pies's 
 
 Entertainment = ["Broadway musical" , "Indy car race" , "Hike Mt Rainier" , "Snowboarding"]
 
-#Destinations randomizer from [list] Function for user
+#Destinations randomizer function from [list] for user
 import random
 
-# location = (random.choice(Destinations))
-# print(location)
+location = (random.choice(Destinations))
+print(location)
 
-# def destination():
+def destination():
    
-#    users_choice = ("No")
+   users_choice = ("No")
    
-#    while users_choice == ("No"):
+   while users_choice == ("No"):
       
-#       users_choice = (input("Does this destination sound Ideal?"))
+      users_choice = (input("Does this destination sound Ideal?"))
       
-#       if users_choice == ("Yes"):
-#          print("Awesome I'm glad that locatin worked out!")
+      if users_choice == ("Yes"):
+         print("Awesome I'm glad that locatin worked out!")
       
-#       elif users_choice == ("No"):
-#          location = (random.choice(Destinations))
-#          print("How do this location sound" + " " + location)
+      elif users_choice == ("No"):
+         location = (random.choice(Destinations))
+         print("How do this location sound" + " " + location)
       
-# destination()         
+destination()         
 
-# # Transportation randomizer from [list] Function for user
+# Transportation randomizer function from [list] for user
 
-# transportation = (random.choice(Mode_of_transportation))
-# print(transportation)
+transportation = (random.choice(Mode_of_transportation))
+print(transportation)
 
-# def travel_means():
+def travel_means():
    
-#    users_choice = ("No")
-#    while users_choice == ("No"):
-#       users_choice = (input("Do you like this mode of Transportation?"))
+   users_choice = ("No")
+   while users_choice == ("No"):
+      
+      users_choice = (input("Do you like this mode of Transportation?"))
 
-#       if users_choice == ("Yes"):
-#          print("Awesome were glad that we were able to find a suitable mode of transportation for you!")
-#       elif users_choice == ("No"):
-#          transportation = (random.choice(Mode_of_transportation))
-#          print("I'm sorry that transportation was'nt well suited for you how about a" + " " + transportation + "?")
+      if users_choice == ("Yes"):
+         print("Awesome were glad that we were able to find a suitable mode of transportation for you!")
+      
+      elif users_choice == ("No"):
+         transportation = (random.choice(Mode_of_transportation))
+         print("I'm sorry that transportation was'nt well suited for you how about a" + " " + transportation + "?")
 
-# travel_means()
+travel_means()
 
 
-#Restaurants randomizer from [list] function for user
+#Restaurants randomizer function from [list] for user
 
 food = (random.choice(Restaurants))
 print(food)
 
 def choice_of_food():
-   users_choice =(input("Does this dining option sound like a good choice?"))
+   users_choice = ("No")
    while users_choice == ("No"):
+      users_choice =(input("Does this dining option sound like a good choice?"))
       if users_choice == ("Yes"):
          print("Great choice! This is a local favorite")
       elif users_choice == ("No"):
@@ -69,17 +72,6 @@ def choice_of_food():
 
 choice_of_food()
 
+#Entertainment randomizer function from [list] for user
 
-
-
-
-
-
-
-
-
-
-
-
-# print(random.choice(Restaurants))
-# print(random.choice(Entertainment))
+enjoyment = (random.choice(Entertainment))
