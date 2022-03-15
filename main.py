@@ -64,8 +64,10 @@ def choice_of_food():
    users_choice = ("No")
    while users_choice == ("No"):
       users_choice =(input("Does this dining option sound like a good choice?"))
+      
       if users_choice == ("Yes"):
          print("Great choice! This is a local favorite")
+      
       elif users_choice == ("No"):
          food = (random.choice(Restaurants))
          print("Does this" + " " + food + " " + "sound like a better option?")
@@ -75,3 +77,18 @@ choice_of_food()
 #Entertainment randomizer function from [list] for user
 
 enjoyment = (random.choice(Entertainment))
+print(enjoyment)
+
+def activities():
+   users_choice = ("No")
+   while users_choice == ("No"):
+      users_choice =(input("Does this activity sound enjoyable?"))
+      
+      if users_choice == ("Yes"):
+         print("What a fantastic choice, you are going to have a great time!")
+      
+      elif users_choice == ("No"):
+         enjoyment = (random.choice(Entertainment))
+         print("Does" + " " + enjoyment + " " + "sound to you?")
+
+activities()
