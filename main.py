@@ -8,112 +8,90 @@ Mode_of_transportation = ["Rental car" , "Subway" , "Bus" , "Limousine"]
 
 Restaurants = ["Aces perfect Pizza" , "Barmini" , "Mayflower Seafood" , "Pies's And Pints"]
 
-Entertainment = ["Broadway musical" , "Indy car race" , "Hike Mt Rainier" , "Snowboarding"]
+Entertainment = ["Broadway musical" , "Indy car race" , "Hiking Mt Rainier" , "Snowboarding"]
 
 #Destinations randomizer function from [list] for user
 import random
-
 location = (random.choice(Destinations))
-print(location)
+
 
 def destination():
+   
+   print("Thank you so much for choosing Day Trip. Allow us to remove all of the stress of creating your Vacation, so that you may enjoy it to your fullest capability!")
    
    users_choice = ("No")
    
    while users_choice == ("No"):
-      
-      users_choice = (input("Does this destination sound Ideal?"))
+      location = (random.choice(Destinations))
+      users_choice = (input("We have selected" + " " + location + " " + "for you? How does this sound? Please confirm with a Yes or No"))
       
       if users_choice == ("Yes"):
-         print("Awesome I'm glad that locatin worked out!")
+         print("Awesome, we're glad that location worked out! Now that we have confirmed where you would like to travel too lets decide on transportation.")
       
       elif users_choice == ("No"):
-         location = (random.choice(Destinations))
-         print("How do this location sound" + " " + location)
+         print("Sorry that didnt work lets try to select another option")
       
 destination()         
 
 # Transportation randomizer function from [list] for user
-
 transportation = (random.choice(Mode_of_transportation))
-print(transportation)
 
 def travel_means():
    
    users_choice = ("No")
+   
    while users_choice == ("No"):
-      
-      users_choice = (input("Do you like this mode of Transportation?"))
+      transportation = (random.choice(Mode_of_transportation))
+      users_choice = (input("We have selected a" + " " + transportation + " " + "for your means of Transportation. How does this sound? Please confirm with Yes or No."))
 
       if users_choice == ("Yes"):
-         print("Awesome were glad that we were able to find a suitable mode of transportation for you!")
+         print("Awesome, now that we have Transportation taking care of lets work on finding you a fantastic place to eat!")
       
       elif users_choice == ("No"):
-         transportation = (random.choice(Mode_of_transportation))
-         print("I'm sorry that transportation was'nt well suited for you how about a" + " " + transportation + "?")
+         print("I'm sorry that transportation was'nt well suited for you. Let's try to find a better option.")
 
 travel_means()
 
 
 #Restaurants randomizer function from [list] for user
-
 food = (random.choice(Restaurants))
-print(food)
-
 def choice_of_food():
    
    users_choice = ("No")
+
    while users_choice == ("No"):
-      
-      users_choice =(input("Does this dining option sound like a good choice?"))
+      food = (random.choice(Restaurants))
+      users_choice =(input("We have selected" + " " + food + " " + "for the choice of dining. How does this sound? Please confirm with a Yes or No."))
       
       if users_choice == ("Yes"):
-         print("Great choice! This is a local favorite")
+         print("Great choice! This is a local favorite. Now that we have your Dining for the evening taken care of let's find you some Entertainment/activities!")
       
       elif users_choice == ("No"):
-         food = (random.choice(Restaurants))
-         print("Does this" + " " + food + " " + "sound like a better option?")
+         print("Sorry that did'nt work out. Lets see if we can find a better Dining option more suited for you.")
 
 choice_of_food()
 
 #Entertainment randomizer function from [list] for user
-
 enjoyment = (random.choice(Entertainment))
-print(enjoyment)
 
 def activities():
    
    users_choice = ("No")
    while users_choice == ("No"):
-      
-      users_choice =(input("Does this activity sound enjoyable?"))
+      enjoyment = (random.choice(Entertainment))
+      users_choice =(input("We have selected" + " " + enjoyment + " " + "for you. Does this sound like a great activity for the day? Please Confirm with a Yes or No."))
       
       if users_choice == ("Yes"):
          print("What a fantastic choice, you are going to have a great time!")
       
       elif users_choice == ("No"):
-         enjoyment = (random.choice(Entertainment))
-         print("Does" + " " + enjoyment + " " + "sound to you?")
+         print("That's Ok let's pick another activity for you to do while on your trip.")
 
 activities()
 
-
-def confirm():
-   print("We are excited to tell you that you have completed all the necessary step required of you and now you can relax knowing that your vacation is planned")
-   users_choice = ("No")
-   while users_choice == ("No"):
-      
-      users_choice = (input("Please Re read your selections above and confirm with a simple Yes or No that what is listed is correct and too your satisfaction"))
-      if users_choice == ("Yes"):
-         print("Thank you for your comnfirmation")
-      elif users_choice == ("No"):
-         print("Thats ok let's start over and create your dream day no need to settle!")
-
-
-confirm()
-
 def display():
-   print("As confirmed above we are excited to present to you a breakdown of your completed Vacation day trip and we know you are going to have a wonderful time. Thank you for using DayTrip and we hope you have the best randomly created vacation ever!")
+   print("Congratulations! You have completed your trip itenary")
+   print("As confirmed above in your selections we are excited to present to you a breakdown of your completed Vacation day trip and we know you are going to have a wonderful time. Thank you for using DayTrip and we hope you have the best randomly created Vacation ever!")
    for items in location ,transportation ,food, enjoyment:
       print(items)
 
